@@ -14,9 +14,22 @@ namespace Log4Net
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello Word");
-            log.Error("this is my error message");
+            divide();
             Console.ReadLine();
+            void divide()
+            {
+                try
+                {
+                    var i = 0;
+                    var a = 5 / i;
+                }
+                catch (DivideByZeroException ex)
+                {
+                    log.Error("división entro 0", ex);
+                }
+
+            }
         }
+
     }
 }
